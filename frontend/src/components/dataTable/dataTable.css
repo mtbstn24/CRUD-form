@@ -1,0 +1,23 @@
+.dataTable{
+    flex: 6;
+    padding: 10px;
+    margin: 10px;
+}
+
+.dataTableHeading{
+    text-align: right;
+}
+
+.dataTable button{
+    padding: 8px;
+    margin-right: 10px;
+    border: none;
+}
+
+.rowUpdateBtn{
+    background-color: grey;
+}
+
+.rowDeleteBtn{
+    background-color: tomato;
+}

@@ -1,0 +1,35 @@
+.addForm{
+    flex: 6;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.addFormGroup{
+    display: flex;
+    flex-direction: column;
+}
+
+.addFormGroup input{
+    margin: 10px;
+    border: none;
+    border-bottom: solid 1px;
+    padding: 3px;
+}
+
+.addFormGroup label{
+    margin: 10px;
+}
+
+.addFormSubmit{
+    margin: 40px 10px 20px 10px;
+    background-color: teal;
+    border: none;
+    padding: 3px;
+}
+
+.addFormCancel{
+    margin: 10px 10px 10px 10px;
+    background-color: orange;
+    border: none;
+    padding: 3px;
+}
