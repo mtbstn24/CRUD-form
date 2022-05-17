@@ -1,10 +1,11 @@
 import "./dataTable.css";
 
-export default function DataTable() {
+export default function DataTable(props) {
+    
     return (
         <div className="dataTable">
             <h2 className="dataTableHeading">View Data</h2>
-            <table className="dataTable" class="table table-hover">
+            <table className="table table-hover">
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -15,26 +16,20 @@ export default function DataTable() {
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>01</td>
-                    <td>Thushari</td>
-                    <td>Tiny Tales</td>
-                    <td>Combination of small stories</td>
-                    <td>
-                        <button className="rowUpdateBtn">Update</button>
-                        <button className="rowDeleteBtn">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>02</td>
-                    <td>Mari</td>
-                    <td>The Letter</td>
-                    <td>Letters to the people</td>
-                    <td>
-                        <button className="rowUpdateBtn">Update</button>
-                        <button className="rowDeleteBtn">Delete</button>
-                    </td>
-                </tr>
+                    {props.data.map((d) => (
+                        <>
+                        <tr>
+                        <td>{d.id}</td>
+                        <td>{d.name}</td>
+                        <td>{d.title}</td>
+                        <td>{d.description}</td>
+                        <td>
+                            <button className="rowUpdateBtn" onClick={()=> props.updateData(d)} >Update</button>
+                            <button className="rowDeleteBtn" onClick={()=> props.deleteData(d.id)} >Delete</button>
+                        </td>
+                        </tr>
+                        </>
+                    ))}
                 </tbody>
             </table>
         </div>
